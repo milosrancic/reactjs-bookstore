@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700');
+
+body {
+  font-family: 'Gentium Book Basic', serif;
+  background: rgb(235, 235, 223);
+  max-width: 1300px;
+  margin: 0 auto;
+}

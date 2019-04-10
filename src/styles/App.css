@@ -1,0 +1,12 @@
+.app {
+  margin-top: 50px;
+}
+
+.row {
+  margin: 20px 0;
+}
+
+.row-top {
+  padding: 5px;
+  border: 1px solid black;
+}
