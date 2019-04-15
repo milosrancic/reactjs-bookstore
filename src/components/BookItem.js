@@ -77,5 +77,3 @@ class BookItem extends React.Component {
 }
 
 export default BookItem;
-
-// onClick={() => this.props.onClick(book.price)} buy btn
