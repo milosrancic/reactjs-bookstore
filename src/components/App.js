@@ -50,12 +50,9 @@ class App extends React.Component {
     this.onTermSubmit(this.state.term);
   };
 
-  onClick = e => {
-    this.addToCart(e);
-  };
-
-  addToCart = e => {
-    this.setState({ cart: e + this.state.cart });
+  handleAddToCart = e => {
+    console.log(`You've bought "${e.volumeInfo.title}" for $${e.price}`);
+    this.setState({ cart: e.price + this.state.cart });
   };
 
   render() {
@@ -71,7 +68,7 @@ class App extends React.Component {
           <Cart cart={this.state.cart} />
         </div>
 
-        <BookList books={this.state.books} onClick={this.onClick} />
+        <BookList books={this.state.books} onClick={this.handleAddToCart} />
       </div>
     );
   }
