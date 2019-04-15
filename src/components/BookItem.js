@@ -4,6 +4,7 @@ import "../styles/BookItem.css";
 class BookItem extends React.Component {
   render() {
     const books = this.props.books;
+
     return (
       <div className="row">
         <ul>
@@ -28,7 +29,7 @@ class BookItem extends React.Component {
                   <p className="text-center">
                     <span>${book.price}</span>
                     <button
-                      onClick={() => this.props.onClick(book.price)}
+                      onClick={() => this.props.onClick(book)}
                       className="btn btn-sm btn-outline-secondary m-3"
                     >
                       buy
@@ -39,8 +40,12 @@ class BookItem extends React.Component {
                 <div className="col-sm col-img">
                   <img
                     className="img-fluid"
-                    src={book.volumeInfo.imageLinks.thumbnail}
-                    alt=""
+                    alt={book.volumeInfo.title}
+                    src={
+                      book.volumeInfo.imageLinks === undefined
+                        ? ""
+                        : `${book.volumeInfo.imageLinks.thumbnail}`
+                    }
                   />
                 </div>
                 <div className="col-sm ">
@@ -72,3 +77,5 @@ class BookItem extends React.Component {
 }
 
 export default BookItem;
+
+// onClick={() => this.props.onClick(book.price)} buy btn
