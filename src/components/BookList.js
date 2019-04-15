@@ -1,12 +1,12 @@
 import React from "react";
 import "../styles/BookList.css";
-import Book from "./Book";
+import BookItem from "./BookItem";
 
 class BookList extends React.Component {
   render() {
     return (
       <div>
-        <Book books={this.props.books} onClick={this.props.onClick} />
+        <BookItem books={this.props.books} onClick={this.props.onClick} />
       </div>
     );
   }
