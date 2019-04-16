@@ -15,7 +15,8 @@ class App extends React.Component {
     this.state = {
       books: [],
       term: "",
-      cart: 0
+      cart: 0,
+      pickedBook: ""
     };
   }
 
@@ -51,8 +52,12 @@ class App extends React.Component {
   };
 
   handleAddToCart = e => {
-    console.log(`You've bought "${e.volumeInfo.title}" for $${e.price}`);
-    this.setState({ cart: e.price + this.state.cart });
+    // console.log(`You've bought "${e.volumeInfo.title}" for $${e.price}`);
+    // this.setState({
+    //   cart: e.price + this.state.cart,
+    //   title: e.title
+    // });
+    this.setState({ pickedBook: e, cart: e.price + this.state.cart });
   };
 
   render() {
@@ -65,7 +70,11 @@ class App extends React.Component {
             onInputChange={this.onInputChange}
           />
 
-          <Cart cart={this.state.cart} />
+          <Cart
+            cart={this.state.cart}
+            title={this.state.title}
+            pickedBook={this.state.pickedBook}
+          />
         </div>
 
         <BookList books={this.state.books} onClick={this.handleAddToCart} />
