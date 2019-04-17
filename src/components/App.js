@@ -51,13 +51,11 @@ class App extends React.Component {
     this.onTermSubmit(this.state.term);
   };
 
-  handleAddToCart = e => {
-    // console.log(`You've bought "${e.volumeInfo.title}" for $${e.price}`);
-    // this.setState({
-    //   cart: e.price + this.state.cart,
-    //   title: e.title
-    // });
-    this.setState({ pickedBook: e, cart: e.price + this.state.cart });
+  handleAddToCart = book => {
+    console.log(`You've bought "${book.volumeInfo.title}" for $${book.price}`);
+
+    this.setState({ cart: book.price + this.state.cart });
+    // this.setState({ pickedBook: e, cart: e.price + this.state.cart });
   };
 
   render() {
