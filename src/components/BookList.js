@@ -2,14 +2,13 @@ import React from "react";
 import "../styles/BookList.css";
 import BookItem from "./BookItem";
 
-class BookList extends React.Component {
-  render() {
-    return (
-      <div>
-        <BookItem books={this.props.books} onClick={this.props.onClick} />
-      </div>
-    );
-  }
-}
+const BookList = props => (
+  <div>
+    {" "}
+    <BookItem books={props.books} onClick={props.onClick} />{" "}
+  </div>
+);
 
 export default BookList;
+
+// MADE INTO FUNCTIONAL COMPONENT
