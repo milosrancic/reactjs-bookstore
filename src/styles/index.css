@@ -3,6 +3,7 @@
 body {
   font-family: 'Gentium Book Basic', serif;
   background: rgb(235, 235, 223);
+  background: white;
   max-width: 1300px;
   margin: 0 auto;
 }
