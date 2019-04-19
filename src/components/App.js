@@ -17,6 +17,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      loading: false,
       books: [],
       term: "",
       cart: 0
@@ -30,20 +31,25 @@ class App extends React.Component {
   };
 
   onTermSubmit = term => {
-    axios
-      .get(`${API}${term}${KEY}`)
-      .then(res => {
-        let books = res.data.items;
-        books = books.map(bookObj => ({
-          ...bookObj,
-          price: this.getRandomPrices(2, 25)
-        }));
-        this.setState({ books });
-      })
-
-      .catch(error => {
-        console.log(error);
-      });
+    this.setState({ loading: true }, () => {
+      axios
+        .get(`${API}${term}${KEY}`)
+        .then(res => {
+          let books = res.data.items;
+          books = books.map(bookObj => ({
+            ...bookObj,
+            price: this.getRandomPrices(2, 25)
+          }));
+          this.setState({
+            // 'loading: false' after request completes
+            loading: false,
+            books: books
+          });
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    });
   };
 
   onInputChange = e => {
@@ -92,11 +98,16 @@ class App extends React.Component {
             onFormSubmit={this.onFormSubmit}
             onInputChange={this.onInputChange}
           />
-
           <Cart cart={this.state.cart} onClick={this.handleClearCart} />
         </div>
 
-        <BookList books={this.state.books} onClick={this.handleAddToCart} />
+        {this.state.loading ? (
+          <div className="loading-container">
+            <i className="fa fa-spinner fa-spin" /> Loading...
+          </div>
+        ) : (
+          <BookList books={this.state.books} onClick={this.handleAddToCart} />
+        )}
       </div>
     );
   }
