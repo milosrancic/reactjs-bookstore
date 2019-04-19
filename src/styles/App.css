@@ -10,3 +10,9 @@
   padding: 5px;
   border: 1px solid black;
 }
+
+.loading-container {
+  margin-top: 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
