@@ -58,7 +58,7 @@ const BookItem = props => (
                     ? `${book.volumeInfo.description.slice(0, 300)}...`
                     : book.volumeInfo.description.slice(0, 300)}
                 </p>
-                {book.volumeInfo.infoLink === undefined ? (
+                {!book.volumeInfo.description ? (
                   ""
                 ) : (
                   <p className="text-center">
