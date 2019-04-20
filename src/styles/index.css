@@ -2,12 +2,12 @@
 
 body {
   font-family: 'Gentium Book Basic', serif;
-  background: rgb(235, 235, 223);
+  background: lightgoldenrodyellow;
+  /* background: #FED8B1; */
+  /* background: rgb(238, 150, 61); */
 
   max-width: 1300px;
   margin: 0 auto;
+  /* background: linear-gradient(to right, rgb(231, 186, 141), rgb(235, 164, 94)) */
 
-  /* 
-  color: white;
-  background: rgb(121, 113, 113); */
 }
