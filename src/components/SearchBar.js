@@ -21,7 +21,7 @@ const SearchBar = props => (
           aria-label="Search"
           required
         />
-        <button type="submit" className="btn btn-sm btn-outline-secondary">
+        <button type="submit" className="btn btn-sm btn-outline-success">
           <i className="fas fa-search" aria-hidden="true" />
         </button>
       </form>
