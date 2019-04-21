@@ -15,7 +15,6 @@ const BookItem = props => (
                     : book.volumeInfo.title}
                 </h4>
                 <p>
-                  {/* author: {book.volumeInfo.authors} */}
                   {!book.volumeInfo.authors
                     ? ""
                     : `authors: ${book.volumeInfo.authors}`}
@@ -32,7 +31,7 @@ const BookItem = props => (
                   <span>${book.price}</span>
                   <button
                     onClick={() => props.onClick(book)}
-                    className="btn btn-sm btn-outline-secondary m-3"
+                    className="btn btn-sm btn-outline-success m-3"
                   >
                     buy
                   </button>
