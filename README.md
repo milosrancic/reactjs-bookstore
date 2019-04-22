@@ -4,12 +4,6 @@
 
 [x] - spinner/loading while API is being fetched
 
-[] - React Router for cart only, in order to show list of selected/bought books
-
-[x] - notification that'll work as book is added on cart
-
-[] - edit notification color & text
-
 [x] - 'x' that appears when book is added to cart, and onclick => cart is empty & value is 0
 
 [x] - edit 'x', background-color, :hover color
