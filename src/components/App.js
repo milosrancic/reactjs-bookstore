@@ -70,7 +70,6 @@ class App extends React.Component {
   };
 
   handleClearCart = () => {
-    // console.log("value of cart: ", this.state.cart);
     this.setState({ cart: 0 });
   };
 
@@ -98,6 +97,7 @@ class App extends React.Component {
             onFormSubmit={this.onFormSubmit}
             onInputChange={this.onInputChange}
           />
+
           <Cart cart={this.state.cart} onClick={this.handleClearCart} />
         </div>
 
