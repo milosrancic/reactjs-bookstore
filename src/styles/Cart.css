@@ -1,14 +1,9 @@
-/* cart paragraph */
-p {
-  /* margin: 0; */
-
-}
-
 .cart {
   margin-top: 2px;
 }
 
 .cart-btn {
+  margin-left: 3px;
   border: 1px solid #5cb85c;
   color: #5cb85c;
   vertical-align: super;
