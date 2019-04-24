@@ -5,8 +5,6 @@ ul {
 
 .row-book {
   padding: 20px;
-  /* height: 270px; */
-  /* height: 30%; */
   border: 1px solid black;
 }
 
@@ -23,8 +21,14 @@ ul {
   position: absolute;
   bottom: 0;
   right: 30px;
+  color: lightslategray;
+}
+
+.more-info-link:hover {
+  color: #5cb85c;
 }
 
 .fa-external-link-alt {
   font-size: 8px;
+  vertical-align: super;
 }

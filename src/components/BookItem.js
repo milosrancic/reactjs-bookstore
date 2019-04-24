@@ -67,10 +67,7 @@ const BookItem = props => (
                       rel="noopener noreferrer"
                       className="more-info-link text-center"
                     >
-                      more info{" "}
-                      <sup>
-                        <i className="fas fa-external-link-alt" />
-                      </sup>
+                      more info <i className="fas fa-external-link-alt" />
                     </a>
                   </p>
                 )}
