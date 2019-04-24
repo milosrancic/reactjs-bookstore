@@ -4,7 +4,7 @@ import "../styles/SearchBar.css";
 const SearchBar = props => (
   <React.Fragment>
     <div className="col-md-4 ">
-      <h3>books</h3>
+      <h2>books</h2>
     </div>
 
     <div className="col-md-4 ">
