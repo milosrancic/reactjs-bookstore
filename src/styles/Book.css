@@ -5,7 +5,8 @@ ul {
 
 .row-book {
   padding: 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border: 1px solid lightslategray;
 }
 
 .row-book .col-sm {
