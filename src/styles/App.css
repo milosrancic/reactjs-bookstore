@@ -1,5 +1,5 @@
-.app {
-  margin-top: 50px;
+#app {
+  margin-top: 20px;
 }
 
 .row {
@@ -8,7 +8,6 @@
 
 .row-top {
   padding: 5px;
-  border: 1px solid black;
 }
 
 .loading-container {
