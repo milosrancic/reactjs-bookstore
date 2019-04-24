@@ -17,6 +17,8 @@ const BookItem = props => (
                 <p>
                   {!book.volumeInfo.authors
                     ? ""
+                    : book.volumeInfo.authors.length === 1
+                    ? `author: ${book.volumeInfo.authors}`
                     : `authors: ${book.volumeInfo.authors}`}
                 </p>
                 <p>
