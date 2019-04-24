@@ -3,11 +3,6 @@
 body {
   font-family: 'Gentium Book Basic', serif;
   background: lightgoldenrodyellow;
-
-  /* background: rgb(238, 150, 61); */
-
   max-width: 1300px;
   margin: 0 auto;
-  /* background: linear-gradient(to right, rgb(231, 186, 141), rgb(235, 164, 94)) */
-
 }

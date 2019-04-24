@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/BookList.css";
-import BookItem from "./BookItem";
+import BookItem from "./Book";
 
 const BookList = props => (
   <div className="book-list">

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/BookItem.css";
+import "../styles/Book.css";
 
 const BookItem = props => (
   <div className="book-item">
@@ -53,9 +53,9 @@ const BookItem = props => (
                 <p>
                   {!book.volumeInfo.description
                     ? " "
-                    : book.volumeInfo.description.length > 300
-                    ? `${book.volumeInfo.description.slice(0, 300)}...`
-                    : book.volumeInfo.description.slice(0, 300)}
+                    : book.volumeInfo.description.length > 310
+                    ? `${book.volumeInfo.description.slice(0, 310)}...`
+                    : book.volumeInfo.description.slice(0, 310)}
                 </p>
                 {!book.volumeInfo.description ? (
                   ""
