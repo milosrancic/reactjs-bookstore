@@ -17,7 +17,7 @@ const SearchBar = props => (
           onChange={props.onInputChange}
           className="form-control form-control-sm mr-3 w-75"
           type="text"
-          placeholder="Search"
+          placeholder="Search for book"
           aria-label="Search"
           required
         />
