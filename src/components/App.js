@@ -89,7 +89,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid text-center" id="app">
+      <div className="app container-fluid text-center">
         <div className="row align-items-center row-top">
           <ReactNotification ref={this.notificationDOMRef} />
           <SearchBar
