@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/BookList.css";
 import BookItem from "./Book";
 
 const BookList = props => (
