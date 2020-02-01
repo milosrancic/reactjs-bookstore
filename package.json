@@ -9,6 +9,7 @@
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-notifications-component": "^1.1.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8"
   },
   "scripts": {
