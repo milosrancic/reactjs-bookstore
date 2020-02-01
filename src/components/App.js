@@ -63,8 +63,6 @@ class App extends React.Component {
   };
 
   handleAddToCart = book => {
-    console.log(`You've bought "${book.volumeInfo.title}" for $${book.price}`);
-
     this.addNotification();
     this.setState({ cart: book.price + this.state.cart });
   };
