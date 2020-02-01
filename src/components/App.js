@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "react-notifications-component/dist/theme.css";
 import "../styles/App.css";
@@ -88,26 +89,47 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app container-fluid text-center">
-        <div className="row align-items-center row-top">
-          <ReactNotification ref={this.notificationDOMRef} />
-          <SearchBar
-            value={this.state.term}
-            onFormSubmit={this.onFormSubmit}
-            onInputChange={this.onInputChange}
-          />
+      <Router>
+        <ul className="nav justify-content-center  ">
+          <li className="nav-item">
+            <Link to={"/"} className="nav-link">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/cart"} className="nav-link">
+              Cart
+            </Link>
+          </li>
+        </ul>
 
-          <Cart cart={this.state.cart} onClick={this.handleClearCart} />
+        <div className="app container-fluid text-center">
+          <div className="row align-items-center row-top">
+            <ReactNotification ref={this.notificationDOMRef} />
+            <SearchBar
+              value={this.state.term}
+              onFormSubmit={this.onFormSubmit}
+              onInputChange={this.onInputChange}
+            />
+
+            <Cart cart={this.state.cart} onClick={this.handleClearCart} />
+          </div>
+
+          {this.state.loading ? (
+            <div className="loading-container">
+              <i className="fa fa-spinner fa-spin" /> Loading...
+            </div>
+          ) : (
+            <BookList books={this.state.books} onClick={this.handleAddToCart} />
+          )}
         </div>
 
-        {this.state.loading ? (
-          <div className="loading-container">
-            <i className="fa fa-spinner fa-spin" /> Loading...
-          </div>
-        ) : (
-          <BookList books={this.state.books} onClick={this.handleAddToCart} />
-        )}
-      </div>
+        <Switch>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }
