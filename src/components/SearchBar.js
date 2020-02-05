@@ -33,7 +33,7 @@ const SearchBar = props => (
 
       <li className="nav-item">
         <Link to={"/cart"} className="nav-link">
-          <i class="fas fa-shopping-cart"></i>
+          <i className="fas fa-shopping-cart"></i>
         </Link>
       </li>
     </ul>
