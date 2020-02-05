@@ -9,6 +9,7 @@ import ReactNotification from "react-notifications-component";
 import SearchBar from "./SearchBar";
 import Cart from "./Cart";
 import BookList from "./BookList";
+import Home from "./Home";
 
 const API = "https://www.googleapis.com/books/v1/volumes?q=";
 const KEY = "&key=AIzaSyCwQ3rWMLHOvgw4dwdmhPOXP5XyIeQBOuI";
@@ -108,6 +109,21 @@ class App extends React.Component {
         )}
 
         <Switch>
+          {/* <Route exact path="/">
+            <Home />
+          </Route> */}
+
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <BookList
+                books={this.state.books}
+                onClick={this.handleAddToCart}
+              />
+            )}
+          ></Route>
+
           <Route
             path="/cart"
             render={props => (
@@ -115,6 +131,7 @@ class App extends React.Component {
                 {...props}
                 cart={this.state.cart}
                 onClick={this.handleClearCart}
+                books={this.state.books}
               />
             )}
           />
