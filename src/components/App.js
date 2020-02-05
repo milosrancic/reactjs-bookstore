@@ -64,7 +64,7 @@ class App extends React.Component {
   };
 
   handleAddToCart = book => {
-    console.log("added to cart");
+    console.log("book is added to cart");
     this.addNotification();
     this.setState({ cart: book.price + this.state.cart });
   };
@@ -97,8 +97,6 @@ class App extends React.Component {
             onFormSubmit={this.onFormSubmit}
             onInputChange={this.onInputChange}
           />
-
-          {/* <Cart cart={this.state.cart} onClick={this.handleClearCart} /> */}
         </div>
 
         {this.state.loading ? (
@@ -112,9 +110,13 @@ class App extends React.Component {
         <Switch>
           <Route
             path="/cart"
-            component={Cart}
-            cart={this.state.cart}
-            onClick={this.handleClearCart}
+            render={props => (
+              <Cart
+                {...props}
+                cart={this.state.cart}
+                onClick={this.handleClearCart}
+              />
+            )}
           />
         </Switch>
       </div>
