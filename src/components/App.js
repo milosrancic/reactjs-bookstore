@@ -22,7 +22,8 @@ class App extends React.Component {
       loading: false,
       books: [],
       term: "",
-      cart: 0
+      cart: 0,
+      selectedBook: []
     };
 
     this.notificationDOMRef = React.createRef();
@@ -67,7 +68,10 @@ class App extends React.Component {
   handleAddToCart = book => {
     console.log("book is added to cart");
     this.addNotification();
-    this.setState({ cart: book.price + this.state.cart });
+    this.setState({
+      cart: book.price + this.state.cart,
+      selectedBook: this.book
+    });
   };
 
   handleClearCart = () => {
@@ -131,6 +135,7 @@ class App extends React.Component {
                 cart={this.state.cart}
                 onClick={this.handleClearCart}
                 books={this.state.books}
+                selectedBook={this.selectedBook}
               />
             )}
           />
