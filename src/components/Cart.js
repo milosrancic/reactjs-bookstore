@@ -2,10 +2,16 @@ import React from "react";
 import "../styles/Cart.css";
 
 const Cart = props => (
-  <div className="cart col-md-4">
-    cart
+  <>
+    <div>cart</div>
+    {console.log("cart component:", props.cart.toFixed(2))}
+    {console.log("props.books:", props.books)}
+    <p>{props.cart.toFixed(2)}</p>
+
+    {/* <div className="cart col-md-4"> */}
+
     {/* <small>total:</small> ${props.cart.toFixed(2)} */}
-    <small>total:</small> ${props.cart}
+    {/* <small>total:</small> ${props.cart}
     {props.cart !== 0 ? (
       <button className="button cart-btn" type="button" onClick={props.onClick}>
         {" "}
@@ -13,8 +19,9 @@ const Cart = props => (
       </button>
     ) : (
       ""
-    )}{" "}
-  </div>
+    )}{" "} */}
+    {/* </div> */}
+  </>
 );
 
 export default Cart;
