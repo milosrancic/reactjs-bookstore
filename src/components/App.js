@@ -100,13 +100,13 @@ class App extends React.Component {
           />
         </div>
 
-        {this.state.loading ? (
+        {/* {this.state.loading ? (
           <div className="loading-container">
             <i className="fa fa-spinner fa-spin" /> Loading...
           </div>
         ) : (
           <BookList books={this.state.books} onClick={this.handleAddToCart} />
-        )}
+        )} */}
 
         <Switch>
           {/* <Route exact path="/">
@@ -128,7 +128,6 @@ class App extends React.Component {
             path="/cart"
             render={props => (
               <Cart
-                {...props}
                 cart={this.state.cart}
                 onClick={this.handleClearCart}
                 books={this.state.books}
