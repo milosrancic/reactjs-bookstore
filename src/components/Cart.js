@@ -5,8 +5,8 @@ const Cart = props => (
   <>
     <div>cart</div>
     {console.log("cart component:", props.cart.toFixed(2))}
-    {console.log("props.books:", props.books)}
-    <p>{props.cart.toFixed(2)}</p>
+    {console.log("selectedBook:", props.selectedBook)}
+    <p>${props.cart.toFixed(2)}</p>
 
     {/* <div className="cart col-md-4"> */}
 
