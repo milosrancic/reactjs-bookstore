@@ -66,12 +66,16 @@ class App extends React.Component {
   };
 
   handleAddToCart = book => {
-    console.log("book is added to cart");
+    // console.log("book is added to cart");
     this.addNotification();
-    this.setState({
+    // this.setState({
+    //   cart: book.price + this.state.cart,
+    //   selectedBook: book.volumeInfo
+    // });
+    this.setState(prevState => ({
       cart: book.price + this.state.cart,
-      selectedBook: this.book
-    });
+      selectedBook: [...prevState.selectedBook, book]
+    }));
   };
 
   handleClearCart = () => {
@@ -133,9 +137,7 @@ class App extends React.Component {
             render={props => (
               <Cart
                 cart={this.state.cart}
-                onClick={this.handleClearCart}
-                books={this.state.books}
-                selectedBook={this.selectedBook}
+                selectedBook={this.state.selectedBook}
               />
             )}
           />
@@ -143,6 +145,9 @@ class App extends React.Component {
       </div>
     );
   }
+}
+{
+  /* OVO KAO PROP U CART  onClick={this.handleClearCart} books={this.state.books} */
 }
 
 export default App;
