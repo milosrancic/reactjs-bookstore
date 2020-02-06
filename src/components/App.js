@@ -22,7 +22,7 @@ class App extends React.Component {
       loading: false,
       books: [],
       term: "",
-      cart: 0,
+      totalCart: 0,
       selectedBook: []
     };
 
@@ -73,13 +73,13 @@ class App extends React.Component {
     //   selectedBook: book.volumeInfo
     // });
     this.setState(prevState => ({
-      cart: book.price + this.state.cart,
+      totalCart: book.price + this.state.totalCart,
       selectedBook: [...prevState.selectedBook, book]
     }));
   };
 
   handleClearCart = () => {
-    this.setState({ cart: 0 });
+    this.setState({ totalCart: 0 });
   };
 
   addNotification = () => {
@@ -136,7 +136,7 @@ class App extends React.Component {
             path="/cart"
             render={props => (
               <Cart
-                cart={this.state.cart}
+                totalCart={this.state.totalCart}
                 selectedBook={this.state.selectedBook}
               />
             )}

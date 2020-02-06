@@ -3,13 +3,11 @@ import "../styles/Cart.css";
 
 const Cart = props => (
   <div className="container-fluid">
-    <div>cart</div>
-
-    {/* <p>selectedBook: {props.selectedBook}</p> */}
+    <h4>Cart</h4>
     <ul>
       {props.selectedBook.map((book, index) => (
         <li key={index}>
-          <div className="row ">
+          <div className="row">
             <div className="col">
               <p>
                 <span className="float-left">
@@ -33,7 +31,7 @@ const Cart = props => (
       ))}
     </ul>
     <p className="float-right total-parapraph">
-      total: ${props.cart.toFixed(2)}
+      <small>total:</small> ${props.totalCart.toFixed(2)}
     </p>
     {/* <div className="cart col-md-4"> */}
     {/* <small>total:</small> ${props.cart.toFixed(2)} */}
