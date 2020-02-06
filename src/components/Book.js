@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Book.css";
 
-const BookItem = props => (
-  <div className="book-item">
+const Book = props => (
+  <div id="book">
     <div className="row">
       <ul>
         {props.books.map(book => (
@@ -82,4 +82,4 @@ const BookItem = props => (
   </div>
 );
 
-export default BookItem;
+export default Book;
