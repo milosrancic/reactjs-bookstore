@@ -2,16 +2,15 @@ import React from "react";
 import "../styles/Cart.css";
 
 const Cart = props => (
-  <div className="container-fluid">
-    <h4>Cart</h4>
+  <div className="container-fluid" id="cart">
+    <h3>Cart</h3>
     <ul>
       {props.selectedBook.map((book, index) => (
         <li key={index}>
           <div className="row">
-            <div className="col">
+            <div className="col no-gutters">
               <p>
                 <span className="float-left">
-                  -{" "}
                   {book.volumeInfo.title.length > 50
                     ? `${book.volumeInfo.title.slice(0, 50)}...`
                     : book.volumeInfo.title}
@@ -30,15 +29,15 @@ const Cart = props => (
         </li>
       ))}
     </ul>
-    {/* <p className="float-right total-parapraph">
-      <small>total:</small> ${props.totalCart.toFixed(2)}
-    </p> */}
-    <p className="float-right total-parapraph">
-      {/* <small>total:</small> */}
-      {props.totalCart > 0 ? `$${props.totalCart.toFixed(2)}` : ""}
-    </p>
+    {props.totalCart > 0 ? (
+      <p className="float-right total-parapraph">
+        <small>total: </small>
+        <strong>${props.totalCart.toFixed(2)}</strong>
+      </p>
+    ) : (
+      <h5 className="mt-5">Your cart is empty! :(</h5>
+    )}
     {/* <div className="cart col-md-4"> */}
-    {/* <small>total:</small> ${props.cart.toFixed(2)} */}
     {/* <small>total:</small> ${props.cart}
     {props.cart !== 0 ? (
       <button className="button cart-btn" type="button" onClick={props.onClick}>
@@ -48,7 +47,6 @@ const Cart = props => (
     ) : (
       ""
     )}{" "} */}
-    {/* </div> */}
   </div>
 );
 
