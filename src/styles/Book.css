@@ -1,19 +1,19 @@
-ul {
+#book ul {
   list-style-type: none;
   padding: 0;
 }
 
-.row-book {
+#book .row-book {
   padding: 20px;
   /* border: 1px solid black; */
   border: 1px solid lightslategray;
 }
 
-.row-book .col-sm {
+#book .row-book .col-sm {
   padding: 20px;
 }
 
-.col-sm:not(.col-img) {
+#book .col-sm:not(.col-img) {
   text-align: justify;
   position: relative;
 }
