@@ -21,3 +21,7 @@
 .cart-btn:active {
   background-color: #5cb85c;
 }
+
+.total-parapraph {
+  border-top: 1px solid black;
+}
