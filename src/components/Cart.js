@@ -30,8 +30,12 @@ const Cart = props => (
         </li>
       ))}
     </ul>
-    <p className="float-right total-parapraph">
+    {/* <p className="float-right total-parapraph">
       <small>total:</small> ${props.totalCart.toFixed(2)}
+    </p> */}
+    <p className="float-right total-parapraph">
+      {/* <small>total:</small> */}
+      {props.totalCart > 0 ? `$${props.totalCart.toFixed(2)}` : ""}
     </p>
     {/* <div className="cart col-md-4"> */}
     {/* <small>total:</small> ${props.cart.toFixed(2)} */}
