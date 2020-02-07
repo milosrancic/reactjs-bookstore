@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Cart.css";
 
 const Cart = props => (
-  <div className="container-fluid" id="cart">
+  <div className="container" id="cart">
     <h3>Cart</h3>
     <ol>
       {props.selectedBook.map((book, index) => (
@@ -14,8 +14,16 @@ const Cart = props => (
                   ? `${book.volumeInfo.title.slice(0, 50)}...`
                   : book.volumeInfo.title}
               </span>
-              <span className="float-right">${book.price}</span>
-              {/* <p>
+              <span className="float-right">
+                ${book.price}{" "}
+                <span
+                  className="delete-cart-item"
+                  onClick={() => props.onClick(book)}
+                >
+                  x
+                </span>{" "}
+              </span>{" "}
+              {/* <p> 
                 {!book.authors
                   ? ""
                   : book.authors.length === 1
