@@ -1,13 +1,22 @@
 .total-parapraph {
   border-top: 1px solid black;
+  margin-right: 47px;
 }
 
 #cart {
   line-height: initial;
 }
 
+ol {
+  padding: 0
+}
+
 ol li {
   border-bottom: 1px solid lightcoral;
+}
+
+.delete-cart-item {
+  padding-left: 20px;
 }
 
 /* .cart {
