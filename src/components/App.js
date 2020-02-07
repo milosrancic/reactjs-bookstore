@@ -66,20 +66,27 @@ class App extends React.Component {
   };
 
   handleAddToCart = book => {
-    // console.log("book is added to cart");
     this.addNotification();
-    // this.setState({
-    //   cart: book.price + this.state.cart,
-    //   selectedBook: book.volumeInfo
-    // });
     this.setState(prevState => ({
       totalCart: book.price + this.state.totalCart,
       selectedBook: [...prevState.selectedBook, book]
     }));
   };
 
-  handleClearCart = () => {
-    this.setState({ totalCart: 0 });
+  handleDeleteCartItem = book => {
+    console.log("book is removed from cart");
+    let filteredBooks = this.state.selectedBook.filter(el => el !== book);
+
+    this.setState(
+      (prevState, nextState) => ({
+        totalCart: prevState.totalCart - book.price,
+
+        selectedBook: this.state.selectedBook.filter(el => el !== book)
+        // selectedBook: filteredBooks
+      }),
+      console.log(this.state.selectedBook)
+    );
+    console.log("selectedBook:", this.state.selectedBook);
   };
 
   addNotification = () => {
@@ -138,6 +145,7 @@ class App extends React.Component {
               <Cart
                 totalCart={this.state.totalCart}
                 selectedBook={this.state.selectedBook}
+                onClick={this.handleDeleteCartItem}
               />
             )}
           />
