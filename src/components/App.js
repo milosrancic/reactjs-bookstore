@@ -78,11 +78,11 @@ class App extends React.Component {
     let filteredBooks = this.state.selectedBook.filter(el => el !== book);
 
     this.setState(
-      (prevState, nextState) => ({
+      prevState => ({
         totalCart: prevState.totalCart - book.price,
 
-        selectedBook: this.state.selectedBook.filter(el => el !== book)
-        // selectedBook: filteredBooks
+        // selectedBook: this.state.selectedBook.filter(el => el !== book)
+        selectedBook: filteredBooks
       }),
       console.log(this.state.selectedBook)
     );
