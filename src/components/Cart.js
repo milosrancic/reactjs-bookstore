@@ -4,19 +4,17 @@ import "../styles/Cart.css";
 const Cart = props => (
   <div className="container-fluid" id="cart">
     <h3>Cart</h3>
-    <ul>
+    <ol>
       {props.selectedBook.map((book, index) => (
         <li key={index}>
           <div className="row">
-            <div className="col no-gutters">
-              <p>
-                <span className="float-left">
-                  {book.volumeInfo.title.length > 50
-                    ? `${book.volumeInfo.title.slice(0, 50)}...`
-                    : book.volumeInfo.title}
-                </span>
-                <span className="float-right">${book.price}</span>
-              </p>
+            <div className="col text-left">
+              <span className="">
+                {book.volumeInfo.title.length > 50
+                  ? `${book.volumeInfo.title.slice(0, 50)}...`
+                  : book.volumeInfo.title}
+              </span>
+              <span className="float-right">${book.price}</span>
               {/* <p>
                 {!book.authors
                   ? ""
@@ -28,7 +26,7 @@ const Cart = props => (
           </div>
         </li>
       ))}
-    </ul>
+    </ol>
     {props.totalCart > 0 ? (
       <p className="float-right total-parapraph">
         <small>total: </small>
