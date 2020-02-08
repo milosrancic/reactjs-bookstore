@@ -35,24 +35,16 @@ const Cart = props => (
         </li>
       ))}
     </ol>
-    {props.totalCart > 0 ? (
+
+    {console.log(props.totalCart)}
+    {props.totalCart > 0 && props.totalCart !== 0 ? (
       <p className="float-right total-parapraph">
         <small>total: </small>
         <strong>${props.totalCart.toFixed(2)}</strong>
       </p>
     ) : (
-      <h5 className="mt-5">Your cart is empty! :(</h5>
+      <h6 className="mt-5">Your cart is empty! :(</h6>
     )}
-    {/* <div className="cart col-md-4"> */}
-    {/* <small>total:</small> ${props.cart}
-    {props.cart !== 0 ? (
-      <button className="button cart-btn" type="button" onClick={props.onClick}>
-        {" "}
-        x{" "}
-      </button>
-    ) : (
-      ""
-    )}{" "} */}
   </div>
 );
 
