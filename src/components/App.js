@@ -73,9 +73,11 @@ class App extends React.Component {
     }));
   };
 
-  handleDeleteCartItem = book => {
+  handleDeleteCartItem = (book, index) => {
     console.log("book is removed from cart");
-    let filteredBooks = this.state.selectedBook.filter(el => el !== book);
+    let filteredBooks = [...this.state.selectedBook];
+    filteredBooks.splice(index, 1);
+    // let filteredBooks = this.state.selectedBook.filter(el => el !== book);
 
     this.setState(
       prevState => ({
@@ -114,7 +116,6 @@ class App extends React.Component {
             onInputChange={this.onInputChange}
           />
         </div>
-
         {/* {this.state.loading ? (
           <div className="loading-container">
             <i className="fa fa-spinner fa-spin" /> Loading...
