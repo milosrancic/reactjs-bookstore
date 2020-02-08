@@ -73,21 +73,13 @@ class App extends React.Component {
   };
 
   handleDeleteCartItem = (book, index) => {
-    console.log("book is removed from cart");
-
     let filteredBooks = [...this.state.selectedBook];
     filteredBooks.splice(index, 1);
 
-    this.setState(
-      prevState => ({
-        totalCart: prevState.totalCart - book.price,
-
-        // selectedBook: this.state.selectedBook.filter(el => el !== book)
-        selectedBook: filteredBooks
-      }),
-      console.log(this.state.selectedBook)
-    );
-    console.log("selectedBook:", this.state.selectedBook);
+    this.setState(prevState => ({
+      totalCart: prevState.totalCart - book.price,
+      selectedBook: filteredBooks
+    }));
   };
 
   addNotification = () => {
