@@ -36,7 +36,7 @@ const Cart = props => (
       ))}
     </ol>
 
-    {console.log(props.totalCart)}
+    {console.log("props.totalCart: ", props.totalCart)}
     {props.totalCart > 0 && props.totalCart !== 0 ? (
       <p className="float-right total-parapraph">
         <small>total: </small>
