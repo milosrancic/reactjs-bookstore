@@ -75,9 +75,9 @@ class App extends React.Component {
 
   handleDeleteCartItem = (book, index) => {
     console.log("book is removed from cart");
+
     let filteredBooks = [...this.state.selectedBook];
     filteredBooks.splice(index, 1);
-    // let filteredBooks = this.state.selectedBook.filter(el => el !== book);
 
     this.setState(
       prevState => ({
@@ -154,9 +154,6 @@ class App extends React.Component {
       </div>
     );
   }
-}
-{
-  /* OVO KAO PROP U CART  onClick={this.handleClearCart} books={this.state.books} */
 }
 
 export default App;
