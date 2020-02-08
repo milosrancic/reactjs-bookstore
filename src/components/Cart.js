@@ -18,7 +18,7 @@ const Cart = props => (
                 ${book.price}{" "}
                 <span
                   className="delete-cart-item"
-                  onClick={() => props.onClick(book)}
+                  onClick={() => props.onClick(book, index)}
                 >
                   x
                 </span>{" "}
