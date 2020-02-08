@@ -5,8 +5,8 @@ const Book = props => (
   <div id="book">
     <div className="row">
       <ul>
-        {props.books.map(book => (
-          <li key={book.id}>
+        {props.books.map((book, index) => (
+          <li key={index}>
             <div className="row row-book">
               <div className="col-sm text-center">
                 <h4>
@@ -32,7 +32,7 @@ const Book = props => (
                 <p className="text-center">
                   <span>${book.price}</span>
                   <button
-                    onClick={() => props.onClick(book)}
+                    onClick={() => props.onClick(book, index)}
                     className="btn btn-sm btn-outline-success m-3"
                   >
                     buy
