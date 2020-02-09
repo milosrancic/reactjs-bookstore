@@ -29,7 +29,9 @@ class App extends React.Component {
   }
 
   getRandomPrices = (min, max) => {
-    return Number((Math.random() * (max - min) + min).toFixed(2));
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
   onTermSubmit = term => {
@@ -40,7 +42,7 @@ class App extends React.Component {
           let books = res.data.items;
           books = books.map(bookObj => ({
             ...bookObj,
-            price: this.getRandomPrices(2, 25)
+            price: this.getRandomPrices(3, 17)
           }));
           this.setState({
             // 'loading: false' after request completes
@@ -64,13 +66,11 @@ class App extends React.Component {
     this.onTermSubmit(this.state.term);
   };
 
-  // totalCart: book.price + prevState.totalCart,
   handleAddToCart = (book, index) => {
     this.addNotification();
-    console.log("book.price: ", book.price);
     this.setState(prevState => ({
-      // totalCart: book.price + this.state.totalCart,
-      totalCart: this.state.totalCart + book.price,
+      totalCart: book.price + this.state.totalCart,
+
       selectedBook: [...prevState.selectedBook, book]
     }));
     console.log("totalCart: ", this.state.totalCart);
