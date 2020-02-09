@@ -66,14 +66,13 @@ class App extends React.Component {
     this.onTermSubmit(this.state.term);
   };
 
-  handleAddToCart = (book, index) => {
+  handleAddToCart = book => {
     this.addNotification();
-    this.setState(prevState => ({
-      totalCart: book.price + this.state.totalCart,
 
+    this.setState(prevState => ({
+      totalCart: prevState.totalCart + book.price,
       selectedBook: [...prevState.selectedBook, book]
     }));
-    console.log("totalCart: ", this.state.totalCart);
   };
 
   handleDeleteCartItem = (book, index) => {
