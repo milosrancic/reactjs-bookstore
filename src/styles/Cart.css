@@ -1,23 +1,25 @@
-.total-parapraph {
-  border-top: 1px solid black;
-  margin-right: 47px;
-}
-
 #cart {
   line-height: initial;
 }
 
+
 ol {
-  padding: 0
+  padding: 0;
 }
 
 ol li {
-  border-bottom: 1px solid lightcoral;
+  /* border-bottom: 1px solid lightcoral; */
 }
 
 .delete-cart-item {
   padding-left: 20px;
   cursor: pointer;
+}
+
+.total-parapraph {
+  border-top: 1px solid black;
+  padding: 10px;
+  margin-left: 30px;
 }
 
 /* .cart {
