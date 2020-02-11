@@ -7,6 +7,7 @@
   padding: 20px;
   /* border: 1px solid black; */
   border: 1px solid lightslategray;
+  border-radius: 5px;
 }
 
 #book .row-book .col-sm {
