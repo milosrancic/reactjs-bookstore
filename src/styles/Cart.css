@@ -17,6 +17,7 @@ ol li {
 
 .delete-cart-item {
   padding-left: 20px;
+  cursor: pointer;
 }
 
 /* .cart {
