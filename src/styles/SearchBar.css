@@ -1,9 +1,11 @@
-h2 {
+.title-paragraph {
   padding: 0;
   margin: 0;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
-input {
-  text-align: none;
+@media only screen and (max-width: 575px) {
+  #navbar>ul>li:nth-child(odd) {
+    padding: 20px initial;
+  }
 }
