@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700');
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 body {
-  font-family: 'Gentium Book Basic', serif;
+  font-family: "Montserrat", sans-serif;
   background: lightgoldenrodyellow;
   margin: 20px auto;
 }
