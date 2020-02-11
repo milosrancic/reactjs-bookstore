@@ -4,17 +4,20 @@ import "../styles/SearchBar.css";
 
 const SearchBar = props => (
   <nav id="navbar" className="container-fluid mb-4 p-0">
-    <ul className="nav justify-content-center">
+    <ul
+      className="nav justify-content-center flex-column flex-sm-row
+"
+    >
       <li className="nav-item">
         <Link to={"/"} className="nav-link">
-          <>books</>
+          <p className="title-paragraph">books</p>
         </Link>
       </li>
 
       <li className="nav-item">
         <form
           onSubmit={props.onFormSubmit}
-          className="form-inline justify-content-center "
+          className="form-inline justify-content-center"
         >
           <input
             value={props.value}
