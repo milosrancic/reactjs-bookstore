@@ -9,12 +9,12 @@ const Cart = props => (
         <li key={index}>
           <div className="row">
             <div className="col text-left">
-              <span className="">
+              <span className="mr-3">
                 {book.volumeInfo.title.length > 50
                   ? `${book.volumeInfo.title.slice(0, 50)}...`
                   : book.volumeInfo.title}
               </span>
-              <span className="float-right">
+              <span className="float-right ml-3">
                 ${book.price}{" "}
                 <span
                   className="delete-cart-item"
@@ -23,13 +23,6 @@ const Cart = props => (
                   x
                 </span>{" "}
               </span>{" "}
-              {/* <p> 
-                {!book.authors
-                  ? ""
-                  : book.authors.length === 1
-                  ? `author: ${book.authors}`
-                  : `authors: ${book.authors}`}
-              </p> */}
             </div>
           </div>
         </li>
