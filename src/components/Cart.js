@@ -38,7 +38,7 @@ const Cart = props => (
         <p>
           <button
             type="button"
-            className="btn btn-outline-success "
+            className="btn btn-outline-info "
             onClick={() => alert("thanks for buying")}
           >
             Proceed to checkout

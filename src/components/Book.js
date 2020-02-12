@@ -33,7 +33,7 @@ const Book = props => (
                   <span>${book.price}</span>
                   <button
                     onClick={() => props.onClick(book, index)}
-                    className="btn btn-sm btn-outline-success m-3"
+                    className="btn btn-sm btn-outline-info m-3 buy-btn"
                   >
                     buy
                   </button>
