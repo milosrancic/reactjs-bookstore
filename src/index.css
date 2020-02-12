@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
 body {
   font-family: "Montserrat", sans-serif;
-  background: lightgoldenrodyellow;
+  background: #F5F5F5;
   margin: 20px auto;
 }
 
@@ -11,5 +12,5 @@ body {
 }
 
 .fa-github:hover {
-  color: #5cb85c;
+  color: #138496;
 }
