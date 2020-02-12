@@ -88,7 +88,7 @@ class App extends React.Component {
   addNotification = () => {
     this.notificationDOMRef.current.addNotification({
       message: "Book is added to cart!",
-      type: "success",
+      type: "info",
       insert: "top",
       container: "top-right",
       animationIn: ["animated", "fadeIn"],
@@ -101,7 +101,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app container-fluid text-center">
+      <div className="app container text-center">
         <div className="row align-items-center row-top">
           <ReactNotification ref={this.notificationDOMRef} />
           <SearchBar
