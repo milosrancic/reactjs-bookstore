@@ -20,33 +20,7 @@ ol li {
 }
 
 .total-parapraph {
-  margin-top: 20px;
-  border-top: 2px solid black;
+  border-top: double;
   padding: 10px;
-  margin-left: 30px;
+  margin: 20px 0 16px 30px;
 }
-
-
-/* .cart {
-  margin-top: 5px;
-}
-
-.cart-btn {
-  margin-left: 3px;
-  border: 1px solid #5cb85c;
-  color: #5cb85c;
-  vertical-align: super;
-  font-size: 10px;
-  border-radius: 3px;
-  background-color: transparent;
-}
-
-.cart-btn:hover {
-  color: white;
-  background-color: #5cb85c;
-
-}
-
-.cart-btn:active {
-  background-color: #5cb85c;
-} */
