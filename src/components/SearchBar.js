@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/SearchBar.css";
 
 const SearchBar = props => (
-  <nav id="navbar" className="container-fluid mb-4 p-0">
+  <nav id="navbar" className="container-fluid mb-5 p-0">
     <ul
       className="nav justify-content-center flex-column flex-sm-row
 "
