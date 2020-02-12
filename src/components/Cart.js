@@ -46,7 +46,7 @@ const Cart = props => (
         </p>
       </div>
     ) : (
-      <h6 className="mt-5">Your cart is empty! :(</h6>
+      <h5 className="mt-5">Your cart is empty! :(</h5>
     )}
   </div>
 );

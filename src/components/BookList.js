@@ -6,7 +6,7 @@ const BookList = props => (
     {props.books.length > 0 ? (
       <BookItem books={props.books} onClick={props.onClick} />
     ) : (
-      <h6>Please search for some book(s)</h6>
+      <h5>Please search for some book(s)</h5>
     )}
   </div>
 );
