@@ -4,6 +4,14 @@
   letter-spacing: 3px;
 }
 
+#navbar ul .nav-item a {
+  color: #303030;
+}
+
+#navbar ul .nav-item a:hover {
+  color: #138496;
+}
+
 @media only screen and (max-width: 575px) {
   #navbar>ul>li:nth-child(odd) {
     padding: 20px initial;

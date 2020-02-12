@@ -11,7 +11,7 @@ ol {
 }
 
 ol li {
-  border-bottom: 1px solid lightcoral;
+  border-bottom: 1px solid #303030;
 }
 
 .delete-cart-item {
