@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/SearchBar.css";
+import "../styles/SearchBar.scss";
 
 const SearchBar = props => (
   <nav id="navbar" className="container-fluid mb-5 p-0">
@@ -10,7 +10,7 @@ const SearchBar = props => (
     >
       <li className="nav-item">
         <Link to={"/"} className="nav-link">
-          <p className="title-paragraph">books</p>
+          <p className="title-p">books</p>
         </Link>
       </li>
 
