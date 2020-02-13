@@ -120,7 +120,6 @@ class App extends React.Component {
             </>
           ) : (
             <Route
-              exact
               path="/reactjs-bookstore/"
               render={props => (
                 <BookList
