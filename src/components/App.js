@@ -120,8 +120,7 @@ class App extends React.Component {
             </>
           ) : (
             <Route
-              exact
-              path="/"
+              path={process.env.PUBLIC_URL + "/"}
               render={props => (
                 <BookList
                   books={this.state.books}
@@ -132,7 +131,7 @@ class App extends React.Component {
           )}
 
           <Route
-            path="/cart"
+            path={process.env.PUBLIC_URL + "/cart"}
             render={props => (
               <Cart
                 totalCart={this.state.totalCart}
