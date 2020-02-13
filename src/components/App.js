@@ -3,7 +3,7 @@ import axios from "axios";
 import { Switch, Route } from "react-router-dom";
 
 import "react-notifications-component/dist/theme.css";
-import "../styles/App.css";
+import "../styles/App.scss";
 
 import ReactNotification from "react-notifications-component";
 import SearchBar from "./SearchBar";
@@ -102,7 +102,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app container text-center">
-        <div className="row align-items-center row-top">
+        <div className="row align-items-center">
           <ReactNotification ref={this.notificationDOMRef} />
           <SearchBar
             value={this.state.term}
@@ -110,25 +110,26 @@ class App extends React.Component {
             onInputChange={this.onInputChange}
           />
         </div>
-        {/* {this.state.loading ? (
-          <div className="loading-container">
-            <i className="fa fa-spinner fa-spin" /> Loading...
-          </div>
-        ) : (
-          <BookList books={this.state.books} onClick={this.handleAddToCart} />
-        )} */}
 
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={props => (
-              <BookList
-                books={this.state.books}
-                onClick={this.handleAddToCart}
-              />
-            )}
-          ></Route>
+          {this.state.loading ? (
+            <>
+              <div className="loading-container">
+                <i className="fa fa-spinner fa-spin" /> Loading...
+              </div>
+            </>
+          ) : (
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <BookList
+                  books={this.state.books}
+                  onClick={this.handleAddToCart}
+                />
+              )}
+            ></Route>
+          )}
 
           <Route
             path="/cart"
