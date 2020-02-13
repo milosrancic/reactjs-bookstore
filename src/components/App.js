@@ -120,7 +120,7 @@ class App extends React.Component {
             </>
           ) : (
             <Route
-              path="/reactjs-bookstore/"
+              path="/"
               render={props => (
                 <BookList
                   books={this.state.books}
@@ -131,7 +131,7 @@ class App extends React.Component {
           )}
 
           <Route
-            path="/reactjs-bookstore/cart"
+            path="/cart"
             render={props => (
               <Cart
                 totalCart={this.state.totalCart}

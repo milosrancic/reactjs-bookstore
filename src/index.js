@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./components/App";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/reactjs-bookstore">
     <App />
   </BrowserRouter>,
   document.getElementById("root")
