@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6f4b06bcc23882fef481",
+    "revision": "b88a7e3f4a36fea02a7c",
     "url": "/reactjs-bookstore/static/css/main.9aab1345.chunk.css"
   },
   {
-    "revision": "6f4b06bcc23882fef481",
-    "url": "/reactjs-bookstore/static/js/main.a939ea56.chunk.js"
+    "revision": "b88a7e3f4a36fea02a7c",
+    "url": "/reactjs-bookstore/static/js/main.e4e5186f.chunk.js"
   },
   {
     "revision": "e43380e5a30289306442",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/reactjs-bookstore/static/js/2.566ba9e2.chunk.js"
   },
   {
-    "revision": "52e0c4d01b3eb811de81caa56634db39",
+    "revision": "95bbc9534b592ed4f0d418e0161a7b6c",
     "url": "/reactjs-bookstore/index.html"
   }
 ];
