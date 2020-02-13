@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Cart.css";
+import "../styles/Cart.scss";
 
 const Cart = props => (
   <div className="container" id="cart">
@@ -39,7 +39,7 @@ const Cart = props => (
           <button
             type="button"
             className="btn btn-outline-info "
-            onClick={() => alert("thanks for buying")}
+            onClick={() => alert("Thanks for buying! :)")}
           >
             Proceed to checkout
           </button>
