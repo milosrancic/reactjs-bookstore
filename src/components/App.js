@@ -132,7 +132,7 @@ class App extends React.Component {
           )}
 
           <Route
-            path={process.env.PUBLIC_URL + "/reactjs-bookstore/cart"}
+            path="/reactjs-bookstore/cart"
             render={props => (
               <Cart
                 totalCart={this.state.totalCart}
