@@ -1,0 +1,41 @@
+#book {
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    .row-book {
+      padding: 20px;
+      border: 1px solid #138496;
+      border-radius: 5px;
+
+      .col-sm {
+        padding: 20px;
+
+        &:not(.col-img) {
+          text-align: justify;
+          position: relative;
+        }
+
+        .buy-btn {
+          letter-spacing: 2px;
+        }
+
+        .more-info-link {
+          position: absolute;
+          bottom: 0;
+          right: 30px;
+          color: #303030;
+
+          &:hover {
+            color: #138496;
+          }
+
+          .fa-external-link-alt {
+            font-size: 8px;
+            vertical-align: super;
+          }
+        }
+      }
+    }
+  }
+}

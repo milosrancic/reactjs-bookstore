@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Book.css";
+import "../styles/Book.scss";
 
 const Book = props => (
   <div id="book">
@@ -51,6 +51,7 @@ const Book = props => (
                   }
                 />
               </div>
+
               <div className="col-sm ">
                 <p>
                   {!book.volumeInfo.description
