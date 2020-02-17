@@ -6,7 +6,7 @@ https://milosrancic.github.io/reactjs-bookstore/
 
 ### Screenshot 
 
-[![Bookstore.png](https://i.postimg.cc/x8jGdwr6/Bookstore.png)](https://postimg.cc/S25YTtx9)
+[![Bookstore.png](https://i.postimg.cc/NfzpkvyR/Bookstore.png)](https://postimg.cc/568BfGSt)
 
 ### Technologies
 
