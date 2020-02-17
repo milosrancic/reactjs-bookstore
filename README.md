@@ -4,9 +4,11 @@
 
 https://milosrancic.github.io/reactjs-bookstore/
 
-### Screenshot 
+### Screenshots 
 
 [![Bookstore.png](https://i.postimg.cc/NfzpkvyR/Bookstore.png)](https://postimg.cc/568BfGSt)
+
+[![Bookstore-cart-1.png](https://i.postimg.cc/ZRWrRCcg/Bookstore-cart-1.png)](https://postimg.cc/9Rj4gXst)
 
 ### Technologies
 
