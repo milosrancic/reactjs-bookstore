@@ -12,7 +12,7 @@ https://milosrancic.github.io/reactjs-bookstore/
 
 ### Technologies
 
-HTML5, CSS3, Sass/SCSS, JavaScript, ReactJS, Bootstrap
+HTML5, CSS3, Sass/SCSS, Bootstrap, JavaScript, ReactJS 
 
 ### Installation
 
